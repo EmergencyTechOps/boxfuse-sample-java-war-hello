@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Jenkins Emergency TechOps Labs</title>
+    <title>QA_ENV Labs</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: #007bff;
+            background-color: #28a745;
             padding: 20px 0;
         }
 
@@ -27,7 +27,7 @@
         }
 
         h2 {
-            color: #17a2b8;
+            color: #ffc107;
         }
 
         .game-area {
@@ -40,7 +40,7 @@
         .game-card {
             width: 250px;
             background-color: #343a40;
-            border: 2px solid #17a2b8;
+            border: 2px solid #ffc107;
             border-radius: 10px;
             padding: 15px;
             cursor: pointer;
@@ -49,8 +49,8 @@
 
         .game-card:hover {
             transform: scale(1.05);
-            background-color: #17a2b8;
-            color: #fff;
+            background-color: #ffc107;
+            color: #343a40;
         }
 
         .game-card h3 {
@@ -72,7 +72,7 @@
         }
 
         #details h3 {
-            color: #f8d44c;
+            color: #17a2b8;
         }
 
         #details p {
@@ -82,32 +82,32 @@
 </head>
 <body>
     <header>
-        <h1>Jenkins Emergency TechOps Labs</h1>
-        <p>Level up your skills by solving challenges!</p>
+        <h1>QA_ENV Labs</h1>
+        <p>Master your quality assurance challenges!</p>
     </header>
 
     <section>
-        <h2>Select Your DEVOPS  Challenge</h2>
+        <h2>Select Your Challenge</h2>
         <div class="game-area">
             <div class="game-card" onclick="showDetails('Level 1')">
                 <img src="https://example.com/level1.jpg" alt="Level 1">
-                <h3>Level 1: Setup Jenkins</h3>
-                <p>Configure Jenkins and integrate with GitHub.</p>
+                <h3>Level 1: Test Case Design</h3>
+                <p>Learn to design effective test cases for various scenarios.</p>
             </div>
             <div class="game-card" onclick="showDetails('Level 2')">
                 <img src="https://example.com/level2.jpg" alt="Level 2">
-                <h3>Level 2: Build Pipeline</h3>
-                <p>Create and execute a CI/CD pipeline.</p>
+                <h3>Level 2: Automated Testing</h3>
+                <p>Set up and execute automated tests using popular tools.</p>
             </div>
             <div class="game-card" onclick="showDetails('Level 3')">
                 <img src="https://example.com/level3.jpg" alt="Level 3">
-                <h3>Level 3: Webhook Deployment</h3>
-                <p>Deploy applications using webhooks.</p>
+                <h3>Level 3: Performance Testing</h3>
+                <p>Analyze system performance under load and stress conditions.</p>
             </div>
             <div class="game-card" onclick="showDetails('Level 4')">
                 <img src="https://example.com/level4.jpg" alt="Level 4">
-                <h3>Level 4: Debug & Fix</h3>
-                <p>Resolve common Jenkins issues.</p>
+                <h3>Level 4: Debug & Report</h3>
+                <p>Identify issues, debug test failures, and create detailed reports.</p>
             </div>
         </div>
     </section>
@@ -118,20 +118,20 @@
         function showDetails(level) {
             const details = {
                 'Level 1': {
-                    title: 'Level 1: Setup Jenkins',
-                    description: 'Learn how to set up Jenkins from scratch and integrate it with GitHub for source code management.',
+                    title: 'Level 1: Test Case Design',
+                    description: 'Learn to create comprehensive and effective test cases to cover all scenarios.',
                 },
                 'Level 2': {
-                    title: 'Level 2: Build Pipeline',
-                    description: 'Create a CI/CD pipeline for automated builds and deployments.',
+                    title: 'Level 2: Automated Testing',
+                    description: 'Set up automated testing frameworks and execute tests for faster QA cycles.',
                 },
                 'Level 3': {
-                    title: 'Level 3: Webhook Deployment',
-                    description: 'Use webhooks to trigger automated deployments to your environment.',
+                    title: 'Level 3: Performance Testing',
+                    description: 'Use tools like JMeter or LoadRunner to measure system performance under various conditions.',
                 },
                 'Level 4': {
-                    title: 'Level 4: Debug & Fix',
-                    description: 'Identify and resolve common issues encountered in Jenkins setups.',
+                    title: 'Level 4: Debug & Report',
+                    description: 'Debug test failures and learn to create professional QA reports.',
                 },
             };
 
