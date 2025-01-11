@@ -9,7 +9,7 @@ pipeline {
                 script {
                     // Checkout the specified branch
                     def branchName = params.BRANCH_NAME
-                    checkout([$class: 'GitSCM', branches: [[name: branchName]], userRemoteConfigs: [[url: 'https://github.com/emergencydevops-collab/boxfuse-sample-java-war-hello.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: branchName]], userRemoteConfigs: [[url: 'https://github.com/sshaik71/boxfuse-sample-java-war-hello.git']]])
                 }
             }
          }
@@ -30,7 +30,7 @@ pipeline {
                 expression { params.BRANCH_NAME == 'fe/dev' }
             }
             steps {
-                deployToTomcat('13.201.62.55', 'tomcat', 'tomcat', 'http://13.201.62.55:8080/manager/text', '/boxfuse-sample-java-war-hello', 'Dev')
+                deployToTomcat('54.91.231.207', 'tomcat', 'tomcat', 'http://54.91.231.207:8080/manager/text', '/boxfuse-sample-java-war-hello', 'Dev')
             }
         }
         stage("Deploy to UAT") {
@@ -38,7 +38,7 @@ pipeline {
                 expression { params.BRANCH_NAME == 'fe/qa' }
             }
             steps {
-                deployToTomcat('35.154.202.90', 'tomcat', 'tomcat', 'http://35.154.202.90:8080/manager/text', '/boxfuse-sample-java-war-hello', 'UAT')
+                deployToTomcat('44.206.0.59', 'tomcat', 'tomcat', 'http://v/manager/text', '/boxfuse-sample-java-war-hello', 'UAT')
             }
         }
         stage("Deploy to Prod") {
@@ -49,10 +49,10 @@ pipeline {
                 input(message: "Do you want to proceed to PROD?", ok: "Proceed") // Approval step
 
                 // Deploy to PROD server after approval
-                deployToTomcat('13.235.113.46', 'tomcat', 'tomcat', 'http://13.235.113.46:8080/manager/text', '/boxfuse-sample-java-war-hello', 'Prod')
+                deployToTomcat('3.87.188.99', 'tomcat', 'tomcat', 'http://3.87.188.99:8080/manager/text', '/boxfuse-sample-java-war-hello', 'Prod')
                 
                 // Send Slack notification
-                slackSend(channel: 'devops-after-hours', message: "Deployment to PROD has been approved by manager.")
+                slackSend(channel: 'devops-mlops-cloud', message: "Deployment to PROD has been approved by manager.")
             }
         }
     }
